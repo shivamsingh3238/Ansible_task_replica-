@@ -1,4 +1,4 @@
-# Ansible_task_replica-
+# Ansible Task Replica-
 
 ## Few important command to run 
 
@@ -9,7 +9,7 @@
    ansible-playbook task.yml -i server.inv     ↲
    ```
    
-   ## ping all given server
+   ## Ping all given server
    ```
    ansible all -m ping -i server.inv     ↲
    ```
