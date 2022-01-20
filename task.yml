@@ -1,0 +1,22 @@
+---
+- name: task-groping
+  hosts: test_server
+  #remote_user: root
+  become: true
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+      notify:
+        -  start nginx
+    - name: Remove useless packages from the cache
+      apt:
+        autoclean: yes
+
+
+  handlers:
+    - name: start nginx
+      service: name=nginx state=restarted
+ 
+  
