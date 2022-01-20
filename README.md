@@ -2,7 +2,6 @@
 
 ## Few important command to run 
 
-### Run:
 
   ## Run Ansible Playbook
    ```
