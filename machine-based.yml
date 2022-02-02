@@ -1,0 +1,27 @@
+---
+- name: machine-check
+  vars_prompt:
+    - name: host_name
+      prompt: Enter the hosts name
+      private: no
+  hosts: '{{host_name}}'
+  #vars:
+  # - os_name: " {{ ansible_facts['distribution'] }} "
+  #remote_user: root
+  become: true
+  gather_facts: true
+  tasks:
+  - debug:
+      var: ansible_facts["distribution"]
+  - debug:
+      var: ansible_facts["memory_mb"]
+  - name : redhate task
+    package:
+      name: "httpd"
+      state: present
+    when: ansible_facts['distribution'] == "RedHat"
+  - name : ubuntu task
+    package:
+      name: "apache2"
+      state: present
+    when: ansible_facts['distribution'] == "Ubuntu"

@@ -1,8 +1,9 @@
 ---
 - name: task-groping
-  hosts: test_server
+  hosts: "{{ nodes }}"
   #remote_user: root
   become: true
+  gather_facts: true
   tasks:
     - name: Install nginx
       apt:

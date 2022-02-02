@@ -1,4 +1,4 @@
 [test_server]
 #root@10.43.12.188 ansible_user=**** ansible_ssh_pass=******
-ubuntu@13.233.70.120
+#ubuntu@35.154.240.156
 root@10.43.12.188
