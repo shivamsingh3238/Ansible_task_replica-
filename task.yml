@@ -1,6 +1,6 @@
 ---
 - name: task-groping
-  hosts: "{{ nodes }}"
+  hosts: "{{ nodes }}" #--extra-vars "nodes=test_server"
   #remote_user: root
   become: true
   gather_facts: true

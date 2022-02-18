@@ -19,3 +19,9 @@ ansible all -m ping -i server.inv     ↲
 ```
 ansible all -m setup -i server.inv ↲
 ```
+
+### create ansible-role using ansible-galaxy
+
+```
+ansible-galaxy role init <your-projectname>
+```
